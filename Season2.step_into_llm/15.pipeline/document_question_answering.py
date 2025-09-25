@@ -20,13 +20,6 @@ import pytesseract
 from mindnlp.transformers import pipeline, AutoTokenizer
 
 
-# def process_image_and_ocr(image_path):
-#     image = Image.open(image_path)
-#     ocr_result = pytesseract.image_to_data(image, output_type=pytesseract.Output.DICT)
-#     words = ocr_result['text']
-#     boxes = [ocr_result['left'], ocr_result['top'], ocr_result['width'], ocr_result['height']]
-#     return words, boxes
-
 def process_image_and_ocr(image_path):
     image = Image.open(image_path)
     ocr_result = pytesseract.image_to_data(image, output_type=pytesseract.Output.DICT)
