@@ -41,17 +41,16 @@ pipe = pipeline(
 
 最后运行结果如下，使用完整的sample运行时间过长，此处截取了部分数据计算。
 
-![image-20250714130523107](README.assets/image-20250714130523107.png)
+<img width="1426" height="656" alt="image-20250714130523107" src="https://github.com/user-attachments/assets/48df884e-8444-4018-9f98-e6d401159b07" />
+
 
 ### document_question_answering
 
 需要安装pytesseract环境，参考教程：https://blog.csdn.net/m0_37576542/article/details/132315537
 
 **示例1：**
-
-![image-20250713130053318](README.assets/image-20250713130053318.png)
-
-![image-20250713130113253](README.assets/image-20250713130113253.png)
+<img width="1420" height="650" alt="image-20250713130053318" src="https://github.com/user-attachments/assets/87f87e37-a23f-4d32-bbbb-9299ef758468" />
+<img width="1395" height="61" alt="image-20250713130113253" src="https://github.com/user-attachments/assets/00781374-d1a5-4ea6-a766-d84351d5f135" />
 
 **示例2：**pipeline接口发生变化，需要接受的参数为图像和 word_boxes，因此需要修改图像处理函数和 dqa_pipeline 参数
 
@@ -106,22 +105,20 @@ question = "What is the invoice number?"
 
 outputs = dqa_pipeline(image=image, question=question, word_boxes=new_word_boxes, top_k=2)
 ```
+<img width="1135" height="742" alt="image-20250713155545092" src="https://github.com/user-attachments/assets/25a8128d-eb45-4005-85f2-d32829108490" />
+<img width="1266" height="61" alt="image-20250713155553971" src="https://github.com/user-attachments/assets/1cab1b7e-2523-4a93-a158-47331fbefedb" />
 
-![image-20250713155545092](README.assets/image-20250713155545092.png)
-
-![image-20250713155553971](README.assets/image-20250713155553971.png)
 
 ### fill_mask_demo
 
 执行结果与预期结果精度基本相同。
-
-![f389eed45ff85939c27063c41f2f0859](README.assets/f389eed45ff85939c27063c41f2f0859.png)
+<img width="1539" height="657" alt="f389eed45ff85939c27063c41f2f0859" src="https://github.com/user-attachments/assets/44bf88fe-197f-4dd6-9976-fad48d4e0773" />
 
 ### question_answering_demo
 
 执行结果与预期结果精度基本相同。
+<img width="752" height="298" alt="a82d675950a82f36d642d125d26c2d08" src="https://github.com/user-attachments/assets/0058393d-cd82-4d1c-a2cf-8caaad6dba5f" />
 
-![a82d675950a82f36d642d125d26c2d08](README.assets/a82d675950a82f36d642d125d26c2d08.png)
 
 ### text_generation_demo
 
@@ -137,8 +134,8 @@ generator = pipeline(
     }
 )
 ```
+<img width="1112" height="517" alt="image-20250713121136805" src="https://github.com/user-attachments/assets/15a42bf0-41fe-494d-bf38-68587d3eef84" />
 
-![image-20250713121136805](README.assets/image-20250713121136805.png)
 
 在进行对话demo时，tokenizer默认没有设置`chat_template`， 此处需要设置：
 
@@ -160,20 +157,18 @@ print(outputs)
 outputs = generator([chat1, chat2], do_sample=False, max_new_tokens=10)
 print(outputs)
 ```
+<img width="1482" height="481" alt="image-20250713123631399" src="https://github.com/user-attachments/assets/3a918c33-45bf-4b9a-91fb-9dc6672fe429" />
 
-![image-20250713123631399](README.assets/image-20250713123631399.png)
 
 ### text2text_generation_demo
+<img width="877" height="368" alt="f7c858bdd2611b330c36ea037b4ea7fc" src="https://github.com/user-attachments/assets/ea38237c-fa8a-4e3c-96d1-8a596b8b4aac" />
 
-![f7c858bdd2611b330c36ea037b4ea7fc](README.assets/f7c858bdd2611b330c36ea037b4ea7fc.png)
 
 ### zero_shot_classification_demo
 
 输出结果与预期结果精度基本一致
-
-![2e5ef6cc4c510ed8e2c71bc3abb05615](README.assets/2e5ef6cc4c510ed8e2c71bc3abb05615.png)
-
-![70aa86533ca44ac12a783ed05b3c0f2b](README.assets/70aa86533ca44ac12a783ed05b3c0f2b.png)
+<img width="1521" height="679" alt="2e5ef6cc4c510ed8e2c71bc3abb05615" src="https://github.com/user-attachments/assets/c8b9bed8-8686-4079-b0f9-affb66fb7f58" />
+<img width="1515" height="192" alt="70aa86533ca44ac12a783ed05b3c0f2b" src="https://github.com/user-attachments/assets/a06f6fa9-76fa-403b-bb6d-9abcb5576229" />
 
 备注：
 
